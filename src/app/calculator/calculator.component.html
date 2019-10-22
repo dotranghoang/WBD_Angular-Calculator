@@ -1,0 +1,26 @@
+<p>Calculator</p>
+<label>
+  First Operand: <br/>
+  <input type="number" (change)="updateFirstOperand($event.target.value)">
+</label>
+<br/>
+<label>
+  <select (change)="updateOperand($event.target.value)">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="X">x</option>
+    <option value="/">/</option>
+  </select>
+</label>
+<br/>
+<label>
+  Second Operand: <br/>
+  <input type="number" (change)="updateSecondOperand($event.target.value)">
+</label>
+<br/>
+<label>
+  <button (click)="calculate()"> Calculate </button>
+</label>
+<label>
+  <h2>Result: {{result}} {{error}}</h2>
+</label>
